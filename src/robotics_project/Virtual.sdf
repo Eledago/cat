@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="virtual_wall">
+    <static>true</static>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.001 0.001 0.001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.001 0.001 0.001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

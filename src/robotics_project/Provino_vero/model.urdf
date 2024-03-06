@@ -1,0 +1,75 @@
+<?xml version='1.0'?>
+
+<robot name="Provino">
+ <material name= "white">
+   <color rgba= "1 1 1 1 ">
+ </material>
+   
+ <material name= "yellow">
+  <color rgba= "1 1 0 1 ">
+ </material>  
+   
+   <link name="link1">
+    <visual>
+      <origin rpy="0.0 0 0" xyz="-0.008313 -0.007251 0"/>
+      <geometry>
+        <mesh filename="package://catkin2_ws/src/robotics_project/Provino_vero/meshes/Case.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+  
+  <link name="link2" >
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.002637 0.002299 0"/>
+      <geometry>
+        <mesh filename="package://catkin2_ws/src/robotics_project/Provino_vero/meshes/Mesh2.dae"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+  
+  <link name="link3">
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.002178 0.002478 0"/>
+      <geometry>
+        <mesh filename="package://catkin2_ws/src/robotics_project/Provino_vero/meshes/Mesh3.dae"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+  
+  <link name="link4">
+    <visual>
+      <origin rpy="0.0 0 0" xyz="0.003498 0.002473 0"/>
+      <geometry>
+        <mesh filename="package://catkin2_ws/src/robotics_project/Provino_vero/meshes/Mesh4.dae"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+  
+  <joint name="joint1" type="fixed">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="-0.008313 -0.007251 0" rpy="0 0 0" />
+  </joint>
+  
+  <joint name="joint2" type="fixed">
+    <parent link="link1"/>
+    <child link="link3"/>
+    <origin xyz="0.002637 0.002299 0" rpy="0 0 0" />
+  </joint>
+  
+  <joint name="joint3" type="fixed">
+    <parent link="link1"/>
+    <child link="link3"/>
+    <origin xyz="0.002178 0.002478 0" rpy="0 0 0" />
+  </joint> 
+  
+  <joint name="joint4" type="fixed">
+    <parent link="link1"/>
+    <child link="link4"/>
+    <origin xyz="0.003498 0.002473 0" rpy="0 0 0" />
+  </joint> 
+ </robot>
